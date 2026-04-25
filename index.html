@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark;">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="color-scheme" content="dark"/>
+  <title>SEBIV</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #131211;
+      --bg2: #1c1b19;
+      --bg3: #232220;
+      --border: #2e2c29;
+      --text: #f0ede8;
+      --text-muted: #888580;
+      --purple: #9B6FC6;
+      --white: #f0ede8;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg) !important;
+      color: var(--text) !important;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 48px;
+      background: rgba(19, 18, 17, 0.95) !important;
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo img { height: 28px; object-fit: contain; }
+
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--purple); }
+
+    /* HERO */
+    .hero {
+      height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('photo2.jpeg');
+      background-size: cover;
+      background-position: center 30%;
+      filter: brightness(0.5) saturate(0.8);
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(13,12,11,0.9) 0%, rgba(13,12,11,0.2) 60%, transparent 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 56px 72px;
+      opacity: 0;
+      animation: fadeUp 1.2s ease forwards 0.3s;
+    }
+
+    .hero-eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(240,237,232,0.5);
+      margin-bottom: 16px;
+    }
+
+    .hero-title {
+      font-size: clamp(56px, 10vw, 110px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--white);
+      line-height: 0.95;
+      margin-bottom: 20px;
+    }
+
+    .hero-slogan {
+      font-size: clamp(14px, 1.8vw, 18px);
+      font-weight: 300;
+      color: rgba(240,237,232,0.65);
+      letter-spacing: 0.05em;
+      font-style: italic;
+    }
+
+    /* PHOTO STRIP */
+    .photo-strip {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      height: 300px;
+      gap: 3px;
+      background: var(--bg);
+    }
+
+    .photo-strip-item { overflow: hidden; }
+
+    .photo-strip-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+      opacity: 0.85;
+    }
+
+    .photo-strip-item:hover img { transform: scale(1.05); opacity: 1; }
+
+    /* SECTIONS */
+    .section-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 100px 48px;
+    }
+
+    .section-label {
+      font-size: 10px;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 48px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+      max-width: 80px;
+    }
+
+    /* SHOP */
+    #shop { background: var(--bg) !important; }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .product-image-wrap {
+      background: var(--bg2);
+      aspect-ratio: 3/4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .product-image-wrap img {
+      width: 75%;
+      object-fit: contain;
+      transition: transform 0.6s ease;
+    }
+
+    .product-image-wrap:hover img { transform: scale(1.04); }
+
+    .product-name {
+      font-size: 38px;
+      font-weight: 300;
+      line-height: 1.1;
+      margin-bottom: 16px;
+      color: var(--white);
+    }
+
+    .product-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.9;
+      margin-bottom: 32px;
+    }
+
+    .product-price {
+      font-size: 52px;
+      font-weight: 700;
+      margin-bottom: 36px;
+      color: var(--white);
+      letter-spacing: -0.02em;
+    }
+
+    .btn-primary {
+      display: block;
+      padding: 17px 40px;
+      background: var(--white);
+      color: var(--bg);
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.25s, color 0.25s;
+      text-align: center;
+      width: 100%;
+      font-weight: 600;
+    }
+
+    .btn-primary:hover { background: var(--purple); color: var(--white); }
+
+    .product-note {
+      margin-top: 14px;
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      text-align: center;
+    }
+
+    /* FULL BLEED */
+    .full-photo { height: 480px; overflow: hidden; position: relative; }
+
+    .full-photo img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center 60%;
+      filter: brightness(0.6) saturate(0.8);
+    }
+
+    .full-photo-text {
+      position: absolute;
+      bottom: 48px; left: 56px;
+      color: var(--white);
+      font-size: clamp(28px, 4vw, 52px);
+      font-weight: 300;
+      line-height: 1.2;
+    }
+
+    .full-photo-text em { color: rgba(240,237,232,0.5); font-style: italic; }
+
+    /* JOURNAL */
+    #journal { background: var(--bg2) !important; }
+
+    .journal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+
+    .journal-card {
+      background: var(--bg3);
+      padding: 36px 32px;
+      transition: background 0.2s;
+    }
+
+    .journal-card:hover { background: #2a2927; }
+
+    .journal-date {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .journal-title {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.3;
+      margin-bottom: 12px;
+      color: var(--white);
+    }
+
+    .journal-excerpt {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 24px;
+    }
+
+    .journal-read {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .journal-read:hover { color: var(--purple); border-color: var(--purple); }
+
+    /* COMMUNITY */
+    #community { background: var(--bg) !important; }
+
+    .community-heading {
+      font-size: clamp(30px, 4vw, 50px);
+      font-weight: 300;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      color: var(--white);
+    }
+
+    .community-sub {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.85;
+      max-width: 360px;
+    }
+
+    /* AGE GATE */
+    .age-gate {
+      display: none;
+      position: fixed; inset: 0;
+      background: rgba(10, 9, 8, 0.98);
+      z-index: 999;
+      align-items: center; justify-content: center;
+      flex-direction: column; text-align: center; padding: 40px;
+    }
+
+    .age-gate.active { display: flex; }
+
+    .age-gate-logo { height: 44px; margin-bottom: 40px; opacity: 0.9; }
+
+    .age-gate-title {
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .age-gate-sub {
+      font-size: 26px;
+      font-weight: 300;
+      color: var(--white);
+      margin-bottom: 40px;
+      line-height: 1.4;
+    }
+
+    .age-gate-check {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 32px;
+      cursor: pointer;
+    }
+
+    .age-gate-check input[type="checkbox"] {
+      width: 18px; height: 18px;
+      accent-color: var(--purple);
+      cursor: pointer;
+    }
+
+    .age-gate-check label {
+      font-size: 13px;
+      color: var(--text-muted);
+      cursor: pointer;
+      letter-spacing: 0.05em;
+    }
+
+    .btn-enter {
+      padding: 16px 56px;
+      background: var(--white);
+      color: var(--bg);
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      opacity: 0.2;
+      pointer-events: none;
+      font-weight: 600;
+    }
+
+    .btn-enter.ready { opacity: 1; pointer-events: all; }
+    .btn-enter.ready:hover { background: var(--purple); color: var(--white); }
+
+    /* UPLOAD */
+    .upload-area {
+      border: 1px dashed var(--border);
+      padding: 56px 40px;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color 0.2s;
+      margin-bottom: 24px;
+      background: var(--bg2);
+    }
+
+    .upload-area:hover { border-color: var(--purple); }
+
+    .upload-area p { font-size: 13px; color: var(--text-muted); margin-top: 10px; line-height: 1.7; }
+
+    .upload-icon { font-size: 26px; opacity: 0.4; margin-bottom: 6px; color: var(--text); }
+
+    .upload-form { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 20px; }
+
+    .upload-form input {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      color: var(--white);
+      padding: 14px 16px;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      outline: none;
+      transition: border-color 0.2s;
+      width: 100%;
+    }
+
+    .upload-form input:focus { border-color: var(--purple); }
+    .upload-form input::placeholder { color: var(--text-muted); }
+
+    .btn-submit {
+      padding: 16px 48px;
+      background: var(--white);
+      color: var(--bg);
+      border: none;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      width: 100%;
+      font-weight: 600;
+    }
+
+    .btn-submit:hover { background: var(--purple); color: var(--white); }
+
+    /* ABOUT */
+    #about { background: var(--bg2) !important; }
+
+    .about-text {
+      font-size: clamp(16px, 1.8vw, 21px);
+      font-weight: 300;
+      line-height: 1.85;
+      color: var(--text);
+      max-width: 720px;
+    }
+
+    .about-text p { margin-bottom: 28px; }
+    .about-text strong { font-weight: 500; color: var(--white); }
+    .about-text em { color: var(--purple); font-style: italic; }
+
+    .about-sig {
+      margin-top: 52px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0a0908 !important;
+      padding: 44px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--border);
+    }
+
+    footer img { height: 22px; opacity: 0.7; }
+
+    .footer-copy {
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 18px 24px; }
+      .nav-links { gap: 16px; }
+      .hero-content { padding: 0 28px 56px; }
+      .section-wrap { padding: 64px 24px; }
+      .product-grid { grid-template-columns: 1fr; gap: 40px; }
+      .journal-grid { grid-template-columns: 1fr; }
+      .photo-strip { grid-template-columns: 1fr 1fr; height: 200px; }
+      .upload-form { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: 16px; text-align: center; }
+      .full-photo-text { left: 28px; bottom: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- AGE GATE -->
+  <div class="age-gate active" id="ageGate">
+    <img src="logo.png" class="age-gate-logo" alt="SEBIV"/>
+    <p class="age-gate-title">Community Access</p>
+    <p class="age-gate-sub">This section is for<br>adults only.</p>
+    <div class="age-gate-check">
+      <input type="checkbox" id="ageConfirm" onchange="toggleEnter(this)"/>
+      <label for="ageConfirm">I confirm I am 18 years of age or older</label>
+    </div>
+    <button class="btn-enter" id="enterBtn" onclick="enterSite()">Enter</button>
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo"><img src="logo.png" alt="SEBIV"/></a>
+    <ul class="nav-links">
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="journal.html">Journal</a></li>
+      <li><a href="#community">Community</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Est. 2018 &nbsp;·&nbsp; Trademarked</p>
+      <h1 class="hero-title">SEBIV</h1>
+      <p class="hero-slogan">"Life can only be understood backwords"</p>
+    </div>
+  </section>
+
+  <!-- PHOTO STRIP -->
+  <div class="photo-strip">
+    <div class="photo-strip-item"><img src="photo3.jpeg" alt=""/></div>
+    <div class="photo-strip-item"><img src="photo4.jpeg" alt=""/></div>
+    <div class="photo-strip-item"><img src="photo1.jpeg" alt=""/></div>
+    <div class="photo-strip-item"><img src="photo5.jpeg" alt=""/></div>
+  </div>
+
+  <!-- SHOP -->
+  <section id="shop">
+    <div class="section-wrap">
+      <p class="section-label">001 Shop</p>
+      <div class="product-grid">
+        <div class="product-image-wrap">
+          <img src="shirt.jpg" alt="SEBIV White Tee"/>
+        </div>
+        <div class="product-details">
+          <h2 class="product-name">The SEBIV<br>White Tee</h2>
+          <p class="product-desc">One shirt. One price. No restocks.<br><br>White heavyweight cotton. Purple SEBIV logo. This isn't just a product it's a statement. Either you feel it or you don't.</p>
+          <div class="product-price">$777</div>
+          <a href="https://buy.stripe.com/cNi4gsfHL0JJ1EcexA2oE01" class="btn-primary">Purchase $777</a>
+          <p class="product-note">Limited. No restocks. Ships worldwide.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FULL BLEED PHOTO -->
+  <div class="full-photo">
+    <img src="photo2.jpeg" alt=""/>
+    <div class="full-photo-text">You either feel it<br><em>or you don't.</em></div>
+  </div>
+
+  <!-- JOURNAL -->
+  <section id="journal">
+    <div class="section-wrap">
+      <p class="section-label">002 Journal</p>
+      <div class="journal-grid" id="journalGrid"></div>
+      <div style="margin-top:40px; text-align:center;">
+        <a href="journal.html" style="font-size:11px; letter-spacing:0.25em; text-transform:uppercase; color:var(--text-muted); text-decoration:none; border-bottom:1px solid var(--border); padding-bottom:4px; transition:color 0.2s;" onmouseover="this.style.color='var(--purple)'" onmouseout="this.style.color='var(--text-muted)'">View All Entries →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY -->
+  <section id="community">
+    <div class="section-wrap">
+      <p class="section-label">003 Community</p>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start;">
+        <div>
+          <h2 class="community-heading">Show us your<br><span style="color:var(--purple); font-style:italic;">energy.</span></h2>
+          <p class="community-sub">18+ only. Upload your photo, your name, Instagram handle, and the song that matches your vibe. Submissions go directly to the SEBIV team.</p>
+        </div>
+        <div>
+
+          <!-- INSTRUCTIONS -->
+          <div style="margin-bottom:28px; border-left:2px solid var(--purple); padding-left:16px;">
+            <p style="font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--purple); margin-bottom:12px;">How it works</p>
+            <p style="font-size:13px; color:var(--text-muted); line-height:2;">
+              <span style="color:var(--white); font-weight:500;">1.</span> Fill out the form below<br>
+              <span style="color:var(--white); font-weight:500;">2.</span> Hit Submit your email app opens pre-filled<br>
+              <span style="color:var(--white); font-weight:500;">3.</span> Attach your photo and send<br><br>
+              <span style="font-size:11px; letter-spacing:0.05em;">Goes directly to the SEBIV team. We review everything before anything is shared.</span>
+            </p>
+          </div>
+
+<div class="upload-form">
+            <input type="text" placeholder="Your Name" id="userName"/>
+            <input type="text" placeholder="Instagram @handle" id="userInsta"/>
+          </div>
+
+          <!-- SONG SEARCH -->
+          <div style="margin-bottom:20px; position:relative;">
+            <input type="text" id="songSearch" placeholder="Search a song to match your vibe..." oninput="searchSongs(this.value)"
+              style="width:100%; background:var(--bg2); border:1px solid var(--border); color:var(--white);
+              padding:14px 16px; font-family:Helvetica,Arial,sans-serif; font-size:13px; outline:none;"/>
+            <div id="songResults" style="display:none; position:absolute; top:100%; left:0; right:0;
+              background:var(--bg3); border:1px solid var(--border); border-top:none; z-index:50; max-height:200px; overflow-y:auto;"></div>
+            <div id="selectedSong" style="display:none; margin-top:10px; padding:12px 16px;
+              background:var(--bg2); border:1px solid var(--purple); font-size:13px; color:var(--white);">
+            </div>
+          </div>
+
+          <button class="btn-submit" onclick="handleSubmit()">Submit</button>
+          <p id="uploadMsg" style="margin-top:14px;font-size:12px;color:var(--text-muted);letter-spacing:0.05em;"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-wrap">
+      <p class="section-label">004 About</p>
+      <div class="about-text">
+        <p>SEBIV didn't start as a brand. <em>It started as a feeling.</em></p>
+        <p>I've always been obsessed with music. Not just listening to it, but really feeling it. Especially when your vision lines up with the melody and you feel it deep in your bones.</p>
+        <p>I came up with SEBIV back in 2018 just gotten out of a relationship, wasn't in the best place mentally. Blue collar work during the week, raves every weekend. Music, visuals, energy… <strong>it all felt connected.</strong></p>
+        <p>I didn't really know what I was doing. I just knew SEBIV meant something. Filed a trademark around audiovisual music, clothing, and digital content without a full plan. <em>I just followed the feeling.</em></p>
+        <p>SEBIV isn't just clothing. It's not just music or visuals either. It's the connection between all of it.</p>
+        <p>Right now, everything feels surface level. The goal with SEBIV is to bring things back to something real. Real connection. Real energy.</p>
+        <p><em>You either have it or you don't.</em></p>
+        <p class="about-sig">Thatsebiv &nbsp;·&nbsp; Est. 2018 &nbsp;·&nbsp; SEBIV</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <img src="logo.png" alt="SEBIV"/>
+    <div class="footer-copy"><a href="faq.html" style="color:var(--text-muted);text-decoration:none;letter-spacing:0.1em;font-size:11px;margin-right:24px;">FAQ & Policies</a><a href="privacy.html" style="color:var(--text-muted);text-decoration:none;letter-spacing:0.1em;font-size:11px;margin-right:24px;">Privacy</a><a href="terms.html" style="color:var(--text-muted);text-decoration:none;letter-spacing:0.1em;font-size:11px;margin-right:24px;">Terms</a>© 2026 SEBIV. All rights reserved.</div>
+  </footer>
+
+  <script src="entries.js"></script>
+  <script>
+    // Render homepage journal grid (latest 3)
+    (function renderHomeJournal() {
+      const grid = document.getElementById('journalGrid');
+      if (!grid) return;
+      JOURNAL_ENTRIES.slice(0, 3).forEach(e => {
+        grid.innerHTML += `
+          <div class="journal-card">
+            <p class="journal-date">${e.date}</p>
+            <h3 class="journal-title">${e.title}</h3>
+            <p class="journal-excerpt">${e.excerpt}</p>
+            <a href="${e.file}" class="journal-read">Read</a>
+          </div>`;
+      });
+    })();
+
+    function toggleEnter(cb) {
+      document.getElementById('enterBtn').classList.toggle('ready', cb.checked);
+    }
+    function enterSite() {
+      const cb = document.getElementById('ageConfirm');
+      if (!cb.checked) return;
+      document.getElementById('ageGate').classList.remove('active');
+    }
+    function handleFile(input) {
+      if (input.files && input.files[0]) {
+        document.getElementById('uploadLabel').innerHTML =
+          '✓ <strong style="color:#f0ede8">' + input.files[0].name + '</strong> selected<br><span style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;">Click to change</span>';
+      }
+    }
+
+    let selectedTrack = null;
+    let searchTimer = null;
+
+    function searchSongs(query) {
+      clearTimeout(searchTimer);
+      const results = document.getElementById('songResults');
+      if (!query || query.length < 2) { results.style.display = 'none'; return; }
+      searchTimer = setTimeout(async () => {
+        try {
+          const res = await fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(query)}&media=music&limit=6`);
+          const data = await res.json();
+          results.innerHTML = '';
+          if (!data.results.length) { results.style.display = 'none'; return; }
+          data.results.forEach(track => {
+            const item = document.createElement('div');
+            item.style.cssText = 'padding:12px 16px; cursor:pointer; border-bottom:1px solid var(--border); font-size:13px; color:var(--white); display:flex; gap:12px; align-items:center;';
+            item.innerHTML = `<img src="${track.artworkUrl60}" style="width:36px;height:36px;object-fit:cover;" /><div><div style="font-weight:500">${track.trackName}</div><div style="font-size:11px;color:var(--text-muted)">${track.artistName}</div></div>`;
+            item.onmouseenter = () => item.style.background = 'var(--bg2)';
+            item.onmouseleave = () => item.style.background = '';
+            item.onclick = () => {
+              selectedTrack = { name: track.trackName, artist: track.artistName };
+              document.getElementById('songSearch').value = track.trackName + ' ' + track.artistName;
+              document.getElementById('selectedSong').style.display = 'block';
+              document.getElementById('selectedSong').innerHTML = '♪ ' + track.trackName + ' ' + track.artistName;
+              results.style.display = 'none';
+            };
+            results.appendChild(item);
+          });
+          results.style.display = 'block';
+        } catch(e) { results.style.display = 'none'; }
+      }, 400);
+    }
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('#songSearch') && !e.target.closest('#songResults')) {
+        document.getElementById('songResults').style.display = 'none';
+      }
+    });
+
+    function handleSubmit() {
+      const name = document.getElementById('userName').value.trim();
+      const insta = document.getElementById('userInsta').value.trim();
+      const msg = document.getElementById('uploadMsg');
+
+      if (!name || !insta) {
+        msg.style.color = '#c07070';
+        msg.textContent = 'Please complete all fields and select a photo.';
+        return;
+      }
+
+      const song = selectedTrack ? selectedTrack.name + ' by ' + selectedTrack.artist : 'No song selected';
+      const subject = encodeURIComponent('SEBIV Community Submission ' + name);
+      const body = encodeURIComponent(
+        'Name: ' + name + '\n' +
+        'Instagram: ' + insta + '\n' +
+        'Song: ' + song + '\n\n' +
+        'Please attach your photo to this email and hit send.'
+      );
+
+      window.location.href = 'mailto:sebivmgmt@gmail.com?subject=' + subject + '&body=' + body;
+
+      msg.style.color = '#9B6FC6';
+      msg.textContent = "✓ Opening your email app attach your photo and hit send!";
+    }
+  </script>
+</body>
+</html>
