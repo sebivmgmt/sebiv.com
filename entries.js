@@ -4,6 +4,76 @@
    ============================================================ */
 const JOURNAL_ENTRIES = [
   {
+    date: "May 5, 2026",
+    title: "I Will Be the Best",
+    song: "Love Yourself DMT",
+    artist: "Worldpeace",
+    quote: "I am the greatest. I said that even before I knew I was.",
+    quoteAuthor: "Muhammad Ali",
+    excerpt: "Go try something new. There's no Olympic sport for scrolling. Next week is my first boxing class.",
+    file: "journal-14.html"
+  },
+  {
+    date: "May 3, 2026",
+    title: "Enjoy the Journey",
+    song: "Rotted Arp",
+    artist: "Lapalux",
+    quote: "Success is stumbling from failure to failure with no loss of enthusiasm.",
+    quoteAuthor: "Winston Churchill",
+    excerpt: "After sobriety, weight loss, doubling my portfolio and halving my debt — it all seems insignificant if I can't finish this app. But is the struggle ever really over?",
+    file: "journal-13.html"
+  },
+  {
+    date: "May 2, 2026",
+    title: "Do It For Future You",
+    song: "Uber Jeets",
+    artist: "Blissfool",
+    quote: "First you take a drink, then the drink takes a drink, then the drink takes you.",
+    quoteAuthor: "F. Scott Fitzgerald",
+    excerpt: "Addiction resembles a vortex — it will suck you back in faster than you even realize. Do it for future you.",
+    file: "journal-12.html"
+  },
+  {
+    date: "April 30, 2026",
+    title: "May Means Millions",
+    song: "Hi",
+    artist: "New York",
+    quote: "All the world's a stage, and all the men and women merely players.",
+    quoteAuthor: "William Shakespeare",
+    excerpt: "Simulation theory was so easy for me to grasp because that is my reality. I see it. I want it. I have it.",
+    file: "journal-11.html"
+  },
+  {
+    date: "April 29, 2026",
+    title: "I AM",
+    song: "Send the Pain On",
+    artist: "Chrome Sparks",
+    quote: "In order to be irreplaceable one must always be different.",
+    quoteAuthor: "Coco Chanel",
+    excerpt: "\"I AM\" is the single strongest string of words combined. Use it to your advantage.",
+    file: "journal-10.html"
+  },
+  {
+    date: "April 28, 2026",
+    title: "Invest in Yourself",
+    song: "Fruity",
+    artist: "Rubblebucket",
+    quote: "If you're not embarrassed by who you were last year, you're not growing.",
+    quoteAuthor: "Alex Hormozi",
+    excerpt: "I officially quit events today. I have been working weekends every week for 5 years. Invest in yourself.",
+    file: "journal-9.html"
+  },
+  {
+    date: "April 26, 2026",
+    title: "Stop Procrastinating",
+    song: "Patience",
+    artist: "Porches",
+    quote: "Do not pray for easy lives. Pray to be stronger men.",
+    quoteAuthor: "John F. Kennedy",
+    excerpt: "Reflect on the dreams you had growing up. Are you on the right track? If not, what is your excuse?",
+    file: "journal-8.html"
+  },
+  {
     date: "April 25, 2026",
     title: "Son Of a Bitch Everything's Real",
     song: "Linked",
