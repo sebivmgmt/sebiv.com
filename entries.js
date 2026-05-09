@@ -11,7 +11,7 @@ const JOURNAL_ENTRIES = [
   },
   {
     date: "May 7, 2026",
-    title: "Create Something",
+    title: "Use Your Mind",
     song: "Finding Butterflies",
     artist: "Blissfool",
     quote: "You control what you give value to.",
