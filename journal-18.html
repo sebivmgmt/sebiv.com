@@ -25,10 +25,9 @@
 
 
 
-    .article-signature { margin-top: 48px; font-size: 17px; color: var(--text-muted); letter-spacing: 0.05em; display: flex; align-items: center; gap: 10px; }
-    .sig-symbol { width: 28px; height: 34px; display: inline-block; vertical-align: middle; }
-    .sig-symbol .s-stroke { stroke: #888580; transition: stroke 0.3s; }
-    .article-signature:hover .s-stroke { stroke: #77B777; }
+    .article-signature { margin-top: 48px; font-size: 17px; color: #777777; letter-spacing: 0.05em; display: flex; align-items: center; gap: 0; }
+    .sig-symbol { width: 22px; height: 26px; display: inline-block; vertical-align: middle; margin-right: 2px; }
+    .sig-symbol .s-stroke { stroke: #777777; }
 
     @media (max-width: 768px) { nav { padding: 18px 24px; } .article { padding: 100px 24px 80px; } }
   </style>
@@ -53,6 +52,15 @@
       <p>I'll leave the flavored vapes for the high schoolers.</p>
       <p>You should too.</p>
     </div>
+    <p class="article-signature">
+      <svg class="sig-symbol" viewBox="0 0 50 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line class="s-stroke" x1="2" y1="5" x2="48" y2="5" stroke-width="4" stroke-linecap="round"/>
+        <line class="s-stroke" x1="2" y1="5" x2="25" y2="32" stroke-width="4" stroke-linecap="round"/>
+        <line class="s-stroke" x1="48" y1="5" x2="25" y2="32" stroke-width="4" stroke-linecap="round"/>
+        <line class="s-stroke" x1="25" y1="32" x2="8" y2="52" stroke-width="4" stroke-linecap="round"/>
+        <line class="s-stroke" x1="25" y1="32" x2="42" y2="52" stroke-width="4" stroke-linecap="round"/>
+      </svg>lexandrino
+    </p>
   </article>
   <footer><a href="index.html">SEBIV</a> &nbsp;·&nbsp; © 2026 All rights reserved.</footer>
 </body>
