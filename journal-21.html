@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="color-scheme" content="dark"/>
-  <title>I Am the Bull · SEBIV</title>
+  <title>Flow State · SEBIV</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root { --bg: #131211; --border: #2e2c29; --text: #f0ede8; --text-muted: #888580; --purple: #9B6FC6; }
@@ -28,6 +28,12 @@
     .sebiv-symbol:hover .s-stroke { stroke: #77B777; }
     .sebiv-symbol.pulse .s-stroke { stroke: #77B777; }
 
+
+    .sebiv-symbol { display: block; margin: 60px auto 0; width: 77px; height: 77px; cursor: pointer; }
+    .sebiv-symbol .s-stroke { stroke: #777777; transition: stroke 0.3s; }
+    .sebiv-symbol:hover .s-stroke { stroke: #77B777; }
+    .sebiv-symbol.pulse .s-stroke { stroke: #77B777; }
+
     @media (max-width: 768px) { nav { padding: 18px 24px; } .article { padding: 100px 24px 80px; } }
   </style>
 </head>
@@ -37,22 +43,37 @@
     <a href="journal.html" class="nav-back">← Journal</a>
   </nav>
   <article class="article">
-    <p class="article-date">April 17, 2025</p>
-    <h1 class="article-title">I Am the Bull</h1>
-    <p class="article-song">♪ Love Eli · I NEVER DIE</p>
-    <p class="article-quote">"Perhaps the most tragic thing about mankind is that we are all dreaming about some magical garden over the horizon, instead of enjoying the roses that are right outside today."</p>
-    <p class="article-quote-author">  Andrew Carnegie</p>
+    <p class="article-date">April 15, 2025</p>
+    <h1 class="article-title">Flow State</h1>
+    <p class="article-song">♪ Jadu Heart · Galaxy Surfing</p>
+    <p class="article-quote">"Here's to the crazy ones. The misfits. The rebels. The troublemakers. Because the people who are crazy enough to think they can change the world, are the ones who do."</p>
+    <p class="article-quote-author">Steve Jobs</p>
     <div class="article-body">
-      <p>You know how I know I'm going to be successful?</p>
-      <p>Anything I've ever wanted in life I've received:</p>
-      <p>The beautiful women.<br/>The beach house.<br/>The free rent.<br/>Even  <br/>The ejection from college.<br/>The heartbreak.</p>
-      <p>Before I had it, I thought it.</p>
-      <p>My manifestation is so unbelievable.</p>
-      <p>I've thought for years "I need to write a book."</p>
-      <p>Now I'm actually going to.</p>
-      <p>I am the bull.</p>
+      <p>5 years ago I would've been very proud of the man I have become.</p>
+      <p>10 years ago I would've expected more.</p>
+      <p>After years of procrastination I'm finally getting started.</p>
+      <p>I'm here to make my younger self proud. You should too.</p>
     </div>
   </article>
+  <svg class="sebiv-symbol" id="sebivSym" viewBox="0 0 77 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Left 7: top bar left, diagonal down-right, leg drops down -->
+    <line class="s-stroke" x1="4" y1="10" x2="34" y2="10" stroke-width="7" stroke-linecap="round"/>
+    <line class="s-stroke" x1="34" y1="10" x2="19" y2="38" stroke-width="7" stroke-linecap="round"/>
+    <line class="s-stroke" x1="19" y1="38" x2="19" y2="67" stroke-width="7" stroke-linecap="round"/>
+    <!-- Right 7 (mirrored): top bar right, diagonal down-left, leg drops down -->
+    <line class="s-stroke" x1="73" y1="10" x2="43" y2="10" stroke-width="7" stroke-linecap="round"/>
+    <line class="s-stroke" x1="43" y1="10" x2="58" y2="38" stroke-width="7" stroke-linecap="round"/>
+    <line class="s-stroke" x1="58" y1="38" x2="58" y2="67" stroke-width="7" stroke-linecap="round"/>
+  </svg>
+  <script>
+    setTimeout(function() {
+      var sym = document.getElementById('sebivSym');
+      if (sym) {
+        sym.classList.add('pulse');
+        setTimeout(function() { sym.classList.remove('pulse'); }, 700);
+      }
+    }, 7000);
+  </script>
   <svg class="sebiv-symbol" id="sebivSym" viewBox="0 0 77 77" fill="none" xmlns="http://www.w3.org/2000/svg">
     <line class="s-stroke" x1="4" y1="10" x2="34" y2="10" stroke-width="7" stroke-linecap="round"/>
     <line class="s-stroke" x1="34" y1="10" x2="19" y2="38" stroke-width="7" stroke-linecap="round"/>

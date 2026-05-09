@@ -498,6 +498,12 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+
+    .sebiv-symbol { display: block; margin: 40px auto 0; width: 44px; height: 44px; cursor: pointer; opacity: 0.5; transition: opacity 0.3s; }
+    .sebiv-symbol:hover { opacity: 1; }
+    .sebiv-symbol .s-stroke { stroke: #777777; transition: stroke 0.3s; }
+    .sebiv-symbol:hover .s-stroke { stroke: #77B777; }
+
     @media (max-width: 768px) {
       nav { padding: 18px 24px; }
       .nav-links { gap: 16px; }
@@ -656,6 +662,14 @@
   </section>
 
   <!-- FOOTER -->
+  <svg class="sebiv-symbol" viewBox="0 0 77 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <line class="s-stroke" x1="4" y1="10" x2="34" y2="10" stroke-width="7" stroke-linecap="round"/>
+    <line class="s-stroke" x1="34" y1="10" x2="19" y2="38" stroke-width="7" stroke-linecap="round"/>
+    <line class="s-stroke" x1="19" y1="38" x2="19" y2="67" stroke-width="7" stroke-linecap="round"/>
+    <line class="s-stroke" x1="73" y1="10" x2="43" y2="10" stroke-width="7" stroke-linecap="round"/>
+    <line class="s-stroke" x1="43" y1="10" x2="58" y2="38" stroke-width="7" stroke-linecap="round"/>
+    <line class="s-stroke" x1="58" y1="38" x2="58" y2="67" stroke-width="7" stroke-linecap="round"/>
+  </svg>
   <footer>
     <img src="logo.png" alt="SEBIV"/>
     <div class="footer-copy"><a href="faq.html" style="color:var(--text-muted);text-decoration:none;letter-spacing:0.1em;font-size:11px;margin-right:24px;">FAQ & Policies</a><a href="privacy.html" style="color:var(--text-muted);text-decoration:none;letter-spacing:0.1em;font-size:11px;margin-right:24px;">Privacy</a><a href="terms.html" style="color:var(--text-muted);text-decoration:none;letter-spacing:0.1em;font-size:11px;margin-right:24px;">Terms</a>© 2026 SEBIV. All rights reserved.</div>

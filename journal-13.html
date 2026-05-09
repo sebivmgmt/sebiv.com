@@ -22,6 +22,12 @@
     .article-body p { margin-bottom: 20px; font-size: 17px; line-height: 1.8; }
     footer { text-align: center; padding: 48px; border-top: 1px solid var(--border); font-size: 11px; color: var(--text-muted); letter-spacing: 0.1em; }
     footer a { color: var(--purple); text-decoration: none; }
+
+    .sebiv-symbol { display: block; margin: 60px auto 0; width: 77px; height: 77px; cursor: pointer; }
+    .sebiv-symbol .s-stroke { stroke: #777777; transition: stroke 0.3s; }
+    .sebiv-symbol:hover .s-stroke { stroke: #77B777; }
+    .sebiv-symbol.pulse .s-stroke { stroke: #77B777; }
+
     @media (max-width: 768px) { nav { padding: 18px 24px; } .article { padding: 100px 24px 80px; } }
   </style>
 </head>
@@ -48,6 +54,23 @@
       <p>I am going to make it a goal to be more conscious of it.</p>
     </div>
   </article>
+  <svg class="sebiv-symbol" id="sebivSym" viewBox="0 0 77 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <line class="s-stroke" x1="4" y1="10" x2="34" y2="10" stroke-width="7" stroke-linecap="round"/>
+    <line class="s-stroke" x1="34" y1="10" x2="19" y2="38" stroke-width="7" stroke-linecap="round"/>
+    <line class="s-stroke" x1="19" y1="38" x2="19" y2="67" stroke-width="7" stroke-linecap="round"/>
+    <line class="s-stroke" x1="73" y1="10" x2="43" y2="10" stroke-width="7" stroke-linecap="round"/>
+    <line class="s-stroke" x1="43" y1="10" x2="58" y2="38" stroke-width="7" stroke-linecap="round"/>
+    <line class="s-stroke" x1="58" y1="38" x2="58" y2="67" stroke-width="7" stroke-linecap="round"/>
+  </svg>
+  <script>
+    setTimeout(function() {
+      var sym = document.getElementById('sebivSym');
+      if (sym) {
+        sym.classList.add('pulse');
+        setTimeout(function() { sym.classList.remove('pulse'); }, 700);
+      }
+    }, 7000);
+  </script>
   <footer><a href="index.html">SEBIV</a> &nbsp;·&nbsp; © 2026 All rights reserved.</footer>
 </body>
 </html>
