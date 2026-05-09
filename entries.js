@@ -1,11 +1,37 @@
-/* ============================================================
-   JOURNAL ENTRIES — add new ones at the TOP of this array.
-   Fields: date, title, song, artist, quote, quoteAuthor, excerpt, file
-   ============================================================ */
 const JOURNAL_ENTRIES = [
   {
+    date: "May 9, 2026",
+    title: "Create or Die",
+    song: "You Don't Get Me High Anymore",
+    artist: "Phantogram",
+    quote: "The grass is always greener on the other side of the fence.",
+    quoteAuthor: "Mom",
+    excerpt: "I think we chase the chase. I think we want the want. We secretly crave the suffering.",
+    file: "journal-20.html"
+  },
+  {
+    date: "May 7, 2026",
+    title: "Create Something",
+    song: "Finding Butterflies",
+    artist: "Blissfool",
+    quote: "You control what you give value to.",
+    quoteAuthor: "Alexandrino",
+    excerpt: "Creating has done something powerful for me. We were put on this earth to use our minds. Use yours in ways that other people wouldn't.",
+    file: "journal-19.html"
+  },
+  {
+    date: "May 6, 2026",
+    title: "Flavored Vapes",
+    song: "If You Wanna Party",
+    artist: "Fcukers",
+    quote: "When something is important enough, you do it even if the odds are not in your favor.",
+    quoteAuthor: "Elon Musk",
+    excerpt: "49 days vape free. I'll leave the flavored vapes for the high schoolers. You should too.",
+    file: "journal-18.html"
+  },
+  {
     date: "May 5, 2026",
-    title: "I Will Be the Best",
+    title: "Punching Air",
     song: "Love Yourself DMT",
     artist: "Worldpeace",
     quote: "I am the greatest. I said that even before I knew I was.",
@@ -84,6 +110,16 @@ const JOURNAL_ENTRIES = [
     file: "journal-7.html"
   },
   {
+    date: "April 24, 2026",
+    title: "Etching My Story Into the Emerald Tablets",
+    song: "Dogs",
+    artist: "ear",
+    quote: "You don't need anyone else's permission to be happy, to pursue your passions, express yourself more, or to live the life you've always dreamed of.",
+    quoteAuthor: "Mel Robbins",
+    excerpt: "I'm etching my story into the emerald fucking tablets.",
+    file: "journal-17.html"
+  },
+  {
     date: "April 23, 2025",
     title: "Welcome to SEBIV",
     song: "All I Need",
@@ -142,5 +178,25 @@ const JOURNAL_ENTRIES = [
     quoteAuthor: "Tony Robbins",
     excerpt: "I deleted TikTok because I found myself consuming more than creating. I am not a consumer. I just don't have creator money *yet.",
     file: "journal-4.html"
+  },
+  {
+    date: "April 14, 2026",
+    title: "April Is the Month",
+    song: "Fetish",
+    artist: "ear",
+    quote: "No matter what has occurred in your life up to this point, it should have no bearing at all on how you live from now on.",
+    quoteAuthor: "Ichiro Kishimi",
+    excerpt: "April is the month I decided to adjust investments towards crypto. SOL @80. ETH @2k.",
+    file: "journal-16.html"
+  },
+  {
+    date: "April 12, 2026",
+    title: "7 Months Until Release",
+    song: "Real Life",
+    artist: "ear",
+    quote: "Do not wait; the time will never be 'just right.' Start where you stand, and work with whatever tools you may have at your command.",
+    quoteAuthor: "Napoleon Hill",
+    excerpt: "Last week my app was approved by Plaid. 7 months until release.",
+    file: "journal-15.html"
   }
 ];
