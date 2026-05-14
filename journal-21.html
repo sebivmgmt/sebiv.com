@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="color-scheme" content="dark"/>
-  <title>Flow State · SEBIV</title>
+  <title>Sculptor · SEBIV</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root { --bg: #131211; --border: #2e2c29; --text: #f0ede8; --text-muted: #888580; --purple: #9B6FC6; }
@@ -20,17 +20,11 @@
     .article-quote { font-size: 20px; font-weight: 300; font-style: italic; color: var(--text-muted); line-height: 1.6; margin-bottom: 8px; padding-left: 24px; border-left: 2px solid var(--purple); }
     .article-quote-author { font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); padding-left: 24px; margin-bottom: 40px; }
     .article-body p { margin-bottom: 20px; font-size: 17px; line-height: 1.8; }
+    .article-signature { display: flex; justify-content: center; padding-top: 48px; margin-top: 48px; border-top: 1px solid var(--border); }
+    .sig-symbol { cursor: pointer; transition: filter 0.3s; }
+    .sig-symbol:hover line { stroke: #77B777 !important; }
     footer { text-align: center; padding: 48px; border-top: 1px solid var(--border); font-size: 11px; color: var(--text-muted); letter-spacing: 0.1em; }
     footer a { color: var(--purple); text-decoration: none; }
-
-
-
-
-
-    .article-signature { margin-top: 48px; font-size: 17px; color: #777777; letter-spacing: 0.05em; display: flex; align-items: center; gap: 0; }
-    .sig-symbol { width: 22px; height: 26px; display: inline-block; vertical-align: middle; margin-right: 2px; }
-    .sig-symbol .s-stroke { stroke: #777777; }
-
     @media (max-width: 768px) { nav { padding: 18px 24px; } .article { padding: 100px 24px 80px; } }
   </style>
 </head>
@@ -40,27 +34,51 @@
     <a href="journal.html" class="nav-back">← Journal</a>
   </nav>
   <article class="article">
-    <p class="article-date">April 15, 2025</p>
-    <h1 class="article-title">Flow State</h1>
-    <p class="article-song">♪ Jadu Heart · Galaxy Surfing</p>
-    <p class="article-quote">"Here's to the crazy ones. The misfits. The rebels. The troublemakers. Because the people who are crazy enough to think they can change the world, are the ones who do."</p>
-    <p class="article-quote-author">Steve Jobs</p>
+    <p class="article-date">May 13, 2026</p>
+    <h1 class="article-title">Sculptor</h1>
+    <p class="article-song">♪ Jadu Heart · Hyper Romance</p>
+    <p class="article-quote">"I paint myself because I am alone. I paint myself because I am the subject I know best."</p>
+    <p class="article-quote-author">Frida Kahlo</p>
     <div class="article-body">
-      <p>5 years ago I would've been very proud of the man I have become.</p>
-      <p>10 years ago I would've expected more.</p>
-      <p>After years of procrastination I'm finally getting started.</p>
-      <p>I'm here to make my younger self proud. You should too.</p>
+      <p>This was my first birthday alone.</p>
+      <p>Alone but not lonely.</p>
+      <p>I feel like an artist.</p>
+      <p>I have been sculpting myself for years.</p>
+      <p>The lack of a drivers license has completely reshaped every aspect of my life.</p>
+      <p>Way more positive than negative.</p>
+      <p>I am beyond grateful —</p>
+      <p>But I "miss" my social life.</p>
+      <p>My alcoholism literally turned into a Pokemon addiction.</p>
+      <p>The helplessness is my weakness.</p>
     </div>
-    <p class="article-signature">
-      <svg class="sig-symbol" viewBox="0 0 50 55" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <line class="s-stroke" x1="2" y1="5" x2="48" y2="5" stroke-width="4" stroke-linecap="round"/>
-        <line class="s-stroke" x1="2" y1="5" x2="25" y2="32" stroke-width="4" stroke-linecap="round"/>
-        <line class="s-stroke" x1="48" y1="5" x2="25" y2="32" stroke-width="4" stroke-linecap="round"/>
-        <line class="s-stroke" x1="25" y1="32" x2="8" y2="52" stroke-width="4" stroke-linecap="round"/>
-        <line class="s-stroke" x1="25" y1="32" x2="42" y2="52" stroke-width="4" stroke-linecap="round"/>
-      </svg>lexandrino
-    </p>
+    <div class="article-signature">
+      <svg width="44" height="58" viewBox="0 0 77 107" fill="none" id="sig" style="cursor:pointer;flex-shrink:0;">
+          <defs>
+            <clipPath id="clip">
+              <rect x="0" y="0" width="77" height="96"/>
+            </clipPath>
+          </defs>
+          <line x1="3.5" y1="3.5" x2="73.5" y2="3.5" stroke="#555555" stroke-width="7" stroke-linecap="round"/>
+          <line x1="3.5" y1="3.5" x2="38.5" y2="52" stroke="#555555" stroke-width="7" stroke-linecap="round"/>
+          <line x1="73.5" y1="3.5" x2="38.5" y2="52" stroke="#555555" stroke-width="7" stroke-linecap="round"/>
+          <g clip-path="url(#clip)">
+            <line x1="38.5" y1="52" x2="73.5" y2="100.5" stroke="#555555" stroke-width="7" stroke-linecap="round"/>
+            <line x1="38.5" y1="52" x2="3.5" y2="100.5" stroke="#555555" stroke-width="7" stroke-linecap="round"/>
+          </g>
+        </svg>
+    </div>
   </article>
   <footer><a href="index.html">SEBIV</a> &nbsp;·&nbsp; © 2026 All rights reserved.</footer>
+  <script>
+    const sig = document.getElementById("sig");
+    if(sig){
+      sig.addEventListener("mouseenter", () => sig.querySelectorAll("line").forEach(l => l.setAttribute("stroke", "#77B777")));
+      sig.addEventListener("mouseleave", () => sig.querySelectorAll("line").forEach(l => l.setAttribute("stroke", "#555555")));
+      setTimeout(() => {
+        sig.querySelectorAll("line").forEach(l => l.setAttribute("stroke", "#77B777"));
+        setTimeout(() => sig.querySelectorAll("line").forEach(l => l.setAttribute("stroke", "#555555")), 700);
+      }, 7000);
+    }
+  </script>
 </body>
 </html>

@@ -1,5 +1,35 @@
 const JOURNAL_ENTRIES = [
   {
+    date: "May 14, 2026",
+    title: "Flume Induction",
+    song: "No Other",
+    artist: "Flume",
+    quote: "Success seems to be connected with action. Successful people keep moving.",
+    quoteAuthor: "Conrad Hilton",
+    excerpt: "Today I am etching Flume into the SEBIV POT. The #1 artist of all time. 5256 minutes played last year.",
+    file: "journal-23.html"
+  },
+  {
+    date: "May 14, 2026",
+    title: "You're Someone Else's Excuse",
+    song: "Valley Serpent",
+    artist: "ear",
+    quote: "The universe is change; our life is what our thoughts make it.",
+    quoteAuthor: "Marcus Aurelius",
+    excerpt: "YOU are probably someone else's excuse. Today I am entering ear into the SEBIV POT.",
+    file: "journal-22.html"
+  },
+  {
+    date: "May 13, 2026",
+    title: "Sculptor",
+    song: "Hyper Romance",
+    artist: "Jadu Heart",
+    quote: "I paint myself because I am alone. I paint myself because I am the subject I know best.",
+    quoteAuthor: "Frida Kahlo",
+    excerpt: "This was my first birthday alone. Alone but not lonely. I have been sculpting myself for years.",
+    file: "journal-21.html"
+  },
+  {
     date: "May 9, 2026",
     title: "Create or Die",
     song: "You Don't Get Me High Anymore",
@@ -11,7 +41,7 @@ const JOURNAL_ENTRIES = [
   },
   {
     date: "May 7, 2026",
-    title: "Use Your Mind",
+    title: "Create Something",
     song: "Finding Butterflies",
     artist: "Blissfool",
     quote: "You control what you give value to.",
@@ -131,9 +161,9 @@ const JOURNAL_ENTRIES = [
   },
   {
     date: "April 20, 2025",
-    title: "Website Coming Soon",
-    song: "I Am Party",
-    artist: "Fred again..",
+    title: "You Decided to Be Here",
+    song: "It's Ok (Just Raw)",
+    artist: "Aloboi",
     quote: "I'm in love with everyone I've ever met in one way or another. I'm just a crazy, unhinged disaster of a human being.",
     quoteAuthor: "Edie Sedgwick",
     excerpt: "It's so easy to hate the world. It's so easy to be a victim. It takes courage to be grateful.",
@@ -141,9 +171,9 @@ const JOURNAL_ENTRIES = [
   },
   {
     date: "April 19, 2025",
-    title: "Sine Wave",
-    song: "It's Ok (Just Raw)",
-    artist: "Aloboi",
+    title: "Gratitude is the Secret",
+    song: "Gold Guns Girls",
+    artist: "Metric",
     quote: "Life is a series of experiences, each one of which makes us bigger, even though sometimes it is hard to realize this.",
     quoteAuthor: "Henry Ford",
     excerpt: "Life is like a sine wave. The highs are reflective and dependent on the lows. Gratitude is the fucking secret.",
@@ -151,9 +181,9 @@ const JOURNAL_ENTRIES = [
   },
   {
     date: "April 18, 2025",
-    title: "Change Your Room Setup",
-    song: "Gold Guns Girls",
-    artist: "Metric",
+    title: "Change the Orientation",
+    song: "I NEVER DIE",
+    artist: "Love Eli",
     quote: "Time is a sort of river of passing events, and strong is its current.",
     quoteAuthor: "Marcus Aurelius",
     excerpt: "I changed how my bedroom is setup today. Habituation is one of my biggest fears. Change the orientation of your bed this spring.",
@@ -162,8 +192,8 @@ const JOURNAL_ENTRIES = [
   {
     date: "April 17, 2025",
     title: "I Am the Bull",
-    song: "I NEVER DIE",
-    artist: "Love Eli",
+    song: "All U Gotta Do",
+    artist: "Bou",
     quote: "Perhaps the most tragic thing about mankind is that we are all dreaming about some magical garden over the horizon.",
     quoteAuthor: "Andrew Carnegie",
     excerpt: "Anything I've ever wanted in life I've received. Before I had it, I thought it. My manifestation is so unbelievable.",
@@ -171,27 +201,17 @@ const JOURNAL_ENTRIES = [
   },
   {
     date: "April 16, 2025",
-    title: "Creator Money",
-    song: "All U Gotta Do",
-    artist: "Bou",
+    title: "I Am Not a Consumer",
+    song: "Galaxy Surfing",
+    artist: "Jadu Heart",
     quote: "Change happens when the pain of staying the same is greater than the pain of change.",
     quoteAuthor: "Tony Robbins",
     excerpt: "I deleted TikTok because I found myself consuming more than creating. I am not a consumer. I just don't have creator money *yet.",
     file: "journal-4.html"
   },
   {
-    date: "April 15, 2025",
-    title: "Flow State",
-    song: "Galaxy Surfing",
-    artist: "Jadu Heart",
-    quote: "Here's to the crazy ones. The misfits. The rebels. The troublemakers. Because the people who are crazy enough to think they can change the world, are the ones who do.",
-    quoteAuthor: "Steve Jobs",
-    excerpt: "5 years ago I would've been very proud of the man I have become. 10 years ago I would've expected more. I'm here to make my younger self proud.",
-    file: "journal-21.html"
-  },
-  {
     date: "April 14, 2026",
-    title: "SOL at $84",
+    title: "April Is the Month",
     song: "Fetish",
     artist: "ear",
     quote: "No matter what has occurred in your life up to this point, it should have no bearing at all on how you live from now on.",
@@ -200,18 +220,8 @@ const JOURNAL_ENTRIES = [
     file: "journal-16.html"
   },
   {
-    date: "April 13, 2026",
-    title: "Days Since",
-    song: "Feisty",
-    artist: "Fred again..",
-    quote: "Your future is created by what you do today, not tomorrow.",
-    quoteAuthor: "Robert Kiyosaki",
-    excerpt: "502 days no alcohol. 27 days no nicotine. I don't know if I'll ever give up sebiv.",
-    file: "journal-22.html"
-  },
-  {
     date: "April 12, 2026",
-    title: "No More Procrastination",
+    title: "7 Months Until Release",
     song: "Real Life",
     artist: "ear",
     quote: "Do not wait; the time will never be 'just right.' Start where you stand, and work with whatever tools you may have at your command.",
