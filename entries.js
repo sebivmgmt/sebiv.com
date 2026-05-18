@@ -1,5 +1,35 @@
 const JOURNAL_ENTRIES = [
   {
+    date: "May 18, 2026",
+    title: "Hourglass with no bottom",
+    song: "Palaces",
+    artist: "Flume",
+    quote: "If you don't have time to do it right, when will you have time to do it over?",
+    quoteAuthor: "John Wooden",
+    excerpt: "I feel like time is running out. Like an hourglass w no bottom. Something big is coming. I can fucking feel it.",
+    file: "journal-24.html"
+  },
+  {
+    date: "May 17, 2026",
+    title: "\" Realism \"",
+    song: "Pink Matter",
+    artist: "Frank Ocean",
+    quote: "The world only exists in your eyes. You can make it as big or as small as you want.",
+    quoteAuthor: "F. Scott Fitzgerald",
+    excerpt: "I am surrounded by small minds. Pessimism is not realism. I have decided I don't give a fuck. I do things for me now.",
+    file: "journal-25.html"
+  },
+  {
+    date: "May 16, 2026",
+    title: "Optimism",
+    song: "New World",
+    artist: "Aloboi",
+    quote: "Optimism is a perfectly legitimate response to failure.",
+    quoteAuthor: "Stephen King",
+    excerpt: "Optimism is the most important virtue. Positivity is a muscle that you have control of. Go conquer it.",
+    file: "journal-26.html"
+  },
+  {
     date: "May 14, 2026",
     title: "Flume Induction",
     song: "No Other",
