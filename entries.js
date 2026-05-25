@@ -1,5 +1,45 @@
 const JOURNAL_ENTRIES = [
   {
+    date: "May 25, 2026",
+    title: "Be You",
+    song: "Hands on Me (Sped Up)",
+    artist: "Elias",
+    quote: "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.",
+    quoteAuthor: "Ralph Waldo Emerson",
+    excerpt: "In a world full of bots, be yourself. I'm not for everyone. If you can't handle my attitude, it's not a reflection of me, but a reflection of you.",
+    file: "journal-30.html"
+  },
+  {
+    date: "May 22, 2026",
+    title: "No friends",
+    song: "Sometimes I Believe in God Sometimes I Believe in Me",
+    artist: "Bassvictim",
+    quote: "Life's too short to hang out with people who aren't resourceful.",
+    quoteAuthor: "Jeff Bezos",
+    excerpt: "I have no friends. I have no social life. I just don't think like everyone else. Family over everything.",
+    file: "journal-29.html"
+  },
+  {
+    date: "May 21, 2026",
+    title: "Morning routine",
+    song: "Give Way",
+    artist: "ear",
+    quote: "Stop chasing the money and start chasing the passion.",
+    quoteAuthor: "Tony Hsieh",
+    excerpt: "This morning was different than most. I now have one robot telling another what to build tf.",
+    file: "journal-28.html"
+  },
+  {
+    date: "May 19, 2026",
+    title: "New default",
+    song: "Lines",
+    artist: "Lorem Ipsum",
+    quote: "Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do.",
+    quoteAuthor: "Mark Twain",
+    excerpt: "I am beyond blessed to be connected to music. I've decided my signature symbol is going to be the default profile picture for users. I designed my own default. I'm going all in.",
+    file: "journal-27.html"
+  },
+  {
     date: "May 18, 2026",
     title: "Hourglass with no bottom",
     song: "Palaces",
