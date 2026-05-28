@@ -1,5 +1,25 @@
 const JOURNAL_ENTRIES = [
   {
+    date: "May 28, 2026",
+    title: "Nikita, The Wicked Induction",
+    song: "Control",
+    artist: "Nikita, The Wicked",
+    quote: "If you are always trying to be normal, you will never know how amazing you can be.",
+    quoteAuthor: "Maya Angelou",
+    excerpt: "Today I am inducting Nikita, The Wicked into the SEBIV POT. Throw him on shuffle you will not be disappointed.",
+    file: "journal-31.html"
+  },
+  {
+    date: "May 26, 2026",
+    title: "The Builder in Exile",
+    song: "Me Plus Ultra",
+    artist: "ear",
+    quote: "Life doesn't get easier or more forgiving, we get stronger and more resilient.",
+    quoteAuthor: "Steve Maraboli",
+    excerpt: "The Builder in Exile. I know I was meant for something. This could be the stepping stone.",
+    file: "journal-32.html"
+  },
+  {
     date: "May 25, 2026",
     title: "Be You",
     song: "Hands on Me (Sped Up)",
