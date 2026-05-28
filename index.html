@@ -569,7 +569,22 @@
           <h2 class="product-name">The SEBIV<br>White Tee</h2>
           <p class="product-desc">One shirt. One price. No restocks.<br><br>White heavyweight cotton. Purple SEBIV logo. This isn't just a product it's a statement. Either you feel it or you don't.</p>
           <div class="product-price">$777</div>
-          <a href="https://buy.stripe.com/cNi4gsfHL0JJ1EcexA2oE01" class="btn-primary">Purchase $777</a>
+          <div style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#777;margin-bottom:16px;">Sold Out</div>
+          <p style="font-size:13px;color:var(--text-muted);margin-bottom:20px;line-height:1.7;">Join the waitlist and you'll be the first to know when it drops again.</p>
+          <form action="https://formspree.io/f/xvzylpap" method="POST" style="display:flex;gap:10px;flex-wrap:wrap;" onsubmit="handleWaitlist(event)">
+            <input type="email" name="email" placeholder="your@email.com" required style="flex:1;min-width:180px;background:#1c1b19;border:1px solid #2e2c29;color:#f0ede8;padding:12px 16px;font-size:13px;letter-spacing:0.05em;outline:none;font-family:Helvetica,Arial,sans-serif;"/>
+            <button type="submit" style="background:transparent;border:1px solid #f0ede8;color:#f0ede8;padding:12px 24px;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;font-family:Helvetica,Arial,sans-serif;transition:all 0.2s;" onmouseover="this.style.background='#9B6FC6';this.style.borderColor='#9B6FC6'" onmouseout="this.style.background='transparent';this.style.borderColor='#f0ede8'">Notify Me</button>
+          </form>
+          <p id="waitlist-confirm" style="display:none;font-size:12px;color:#77B777;margin-top:12px;letter-spacing:0.05em;">You're on the list.</p>
+          <script>
+            function handleWaitlist(e) {
+              e.preventDefault();
+              const form = e.target;
+              fetch('https://formspree.io/f/xvzylpap', { method:'POST', body: new FormData(form), headers:{'Accept':'application/json'} })
+                .then(() => { form.style.display='none'; document.getElementById('waitlist-confirm').style.display='block'; })
+                .catch(() => { form.style.display='none'; document.getElementById('waitlist-confirm').style.display='block'; });
+            }
+          </script>
           <p class="product-note">Limited. No restocks. Ships worldwide.</p>
         </div>
       </div>
