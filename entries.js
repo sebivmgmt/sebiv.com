@@ -1,5 +1,15 @@
 const JOURNAL_ENTRIES = [
   {
+    date: "May 29, 2026",
+    title: "Temptations",
+    song: "Take Everything",
+    artist: "Europa",
+    quote: "Wealth consists not in having great possessions, but in having few wants.",
+    quoteAuthor: "Epictetus",
+    excerpt: "I live for the chase. As soon as I have it, I don't want it anymore. I'm worried that I won't appreciate it.",
+    file: "journal-33.html"
+  },
+  {
     date: "May 28, 2026",
     title: "Nikita, The Wicked Induction",
     song: "Control",
@@ -26,7 +36,7 @@ const JOURNAL_ENTRIES = [
     artist: "Elias",
     quote: "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.",
     quoteAuthor: "Ralph Waldo Emerson",
-    excerpt: "In a world full of bots, be yourself. I'm not for everyone. If you can't handle my attitude, it's not a reflection of me, but a reflection of you.",
+    excerpt: "In a world full of façades, be yourself. I'm not for everyone. If you can't handle my attitude, it's not a reflection of me, but a reflection of you.",
     file: "journal-30.html"
   },
   {
@@ -56,7 +66,7 @@ const JOURNAL_ENTRIES = [
     artist: "Lorem Ipsum",
     quote: "Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do.",
     quoteAuthor: "Mark Twain",
-    excerpt: "I am beyond blessed to be connected to music. I've decided my signature symbol is going to be the default profile picture for users. I designed my own default. I'm going all in.",
+    excerpt: "I am beyond blessed to be connected to music. I've decided my signature symbol is going to be the default profile picture for users. I'm going all in.",
     file: "journal-27.html"
   },
   {
