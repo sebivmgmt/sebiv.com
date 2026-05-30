@@ -46,12 +46,9 @@
     }
 
     .nav-logo img { height: 28px; object-fit: contain; }
-    .nav-hamburger { cursor: pointer; display: flex; flex-direction: column; justify-content: center; gap: 5px; padding: 4px; }
-    .nav-hamburger span { display: block; height: 3px; border-radius: 2px; background: #888580; transition: all 0.2s; }
-    .nav-hamburger span:nth-child(1) { width: 28px; }
-    .nav-hamburger span:nth-child(2) { width: 20px; }
-    .nav-hamburger span:nth-child(3) { width: 14px; }
-    .nav-hamburger:hover span, .nav-hamburger.open span { background: var(--purple); }
+    .nav-hamburger { cursor: pointer; display: flex; align-items: center; padding: 4px; }
+    .nav-hamburger img { height: 22px; width: auto; opacity: 0.7; transition: opacity 0.2s; }
+    .nav-hamburger:hover img, .nav-hamburger.open img { opacity: 1; }
     .nav-drawer { position: fixed; top: 0; right: -280px; width: 280px; height: 100vh; background: #131211; border-left: 1px solid #2e2c29; z-index: 200; transition: right 0.3s ease; display: flex; flex-direction: column; padding: 80px 40px 40px; }
     .nav-drawer.open { right: 0; }
     .nav-drawer-close { position: absolute; top: 24px; right: 24px; cursor: pointer; color: #888580; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; transition: color 0.2s; }
@@ -531,9 +528,7 @@
   <nav>
     <a href="#" class="nav-logo"><img src="logo.png" alt="SEBIV"/></a>
     <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
+      <img src="menu.png" alt="menu"/>
     </div>
   </nav>
 
