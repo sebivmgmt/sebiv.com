@@ -1,5 +1,15 @@
 const JOURNAL_ENTRIES = [
   {
+    date: "May 30, 2026",
+    title: "Logo redesign",
+    song: "Nano",
+    artist: "FX",
+    quote: "Then remind yourself that past and future have no power over you. Only the present, and even that can be minimized.",
+    quoteAuthor: "Marcus Aurelius",
+    excerpt: "Today I redesigned the E in SEBIV. I see each shirt selling for thousands as the first SEBIV shirts. I manifest myself living the life.",
+    file: "journal-34.html"
+  },
+  {
     date: "May 29, 2026",
     title: "Temptations",
     song: "Take Everything",
