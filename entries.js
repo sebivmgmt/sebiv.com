@@ -1,12 +1,62 @@
 const JOURNAL_ENTRIES = [
   {
+    date: "June 14, 2026",
+    title: "Kanye Induction",
+    song: "Gemini Season",
+    artist: "Kanye",
+    quote: "It's better to be hated for who you are than loved for who you are not.",
+    quoteAuthor: "Kurt Cobain",
+    excerpt: "Today I'd like to formally induct Kanye West into the SEBIV POT. He's not walking around w a mask. Be like Kanye.",
+    file: "journal-39.html"
+  },
+  {
+    date: "June 12, 2026",
+    title: "Man of experience",
+    song: "Water and Power",
+    artist: "ear",
+    quote: "Success does not consist in never making mistakes but in never making the same one a second time.",
+    quoteAuthor: "George Bernard Shaw",
+    excerpt: "I'm a man of experience. That's how I learn best. I found my true motivations: money, women, and the law.",
+    file: "journal-38.html"
+  },
+  {
+    date: "June 8, 2026",
+    title: "Back from Court",
+    song: "Allons-y",
+    artist: "Nikita, The Wicked",
+    quote: "Lost time is never found again.",
+    quoteAuthor: "Benjamin Franklin",
+    excerpt: "Time is the absolute most valuable asset. Consuming is the drug that is killing our youth. Go create.",
+    file: "journal-35.html"
+  },
+  {
+    date: "June 1, 2026",
+    title: "Affirmations",
+    song: "A New Life",
+    artist: "Zeke Blue",
+    quote: "If you want something you've never had, you must be willing to do something you've never done.",
+    quoteAuthor: "Thomas Jefferson",
+    excerpt: "Money flows to me always in all ways. I guess I'm gonna be a citizen of all 195 countries. Wish me luck.",
+    file: "journal-37.html"
+  },
+  {
+    date: "May 31, 2026",
+    title: "Bumps in the road",
+    song: "You Know My Name",
+    artist: "Finn Sigil",
+    quote: "Life is not a problem to be solved, but a reality to be experienced.",
+    quoteAuthor: "Søren Kierkegaard",
+    excerpt: "Don't wait for all of the lights to turn green before leaving the house. My future wife will replace my addiction. Calling it now it's gonna be Jackie.",
+    file: "journal-36.html"
+  },
+  {
     date: "May 30, 2026",
     title: "Logo redesign",
     song: "Nano",
     artist: "FX",
     quote: "Then remind yourself that past and future have no power over you. Only the present, and even that can be minimized.",
     quoteAuthor: "Marcus Aurelius",
-    excerpt: "Today I redesigned the E in SEBIV. I see each shirt selling for thousands as the first SEBIV shirts. I manifest myself living the life.",
+    excerpt: "Today I redesigned the E in SEBIV. It now resembles a 7. I manifest myself living the life.",
     file: "journal-34.html"
   },
   {
