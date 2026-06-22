@@ -1,5 +1,35 @@
 const JOURNAL_ENTRIES = [
   {
+    date: "June 22, 2026",
+    title: "I AM",
+    song: "Blast",
+    artist: "Clams Casino",
+    quote: "I think, therefore I am.",
+    quoteAuthor: "René Descartes",
+    excerpt: "I AM _______ The word you use to fill that in will be undoubtedly true. Change your thoughts and change your life.",
+    file: "journal-40.html"
+  },
+  {
+    date: "June 19, 2026",
+    title: "Motivation in Waves",
+    song: "Soothsayer",
+    artist: "Death Pact",
+    quote: "People be feeling like I'm cocky because of the shit that I say; if you could imagine the shit that I think.",
+    quoteAuthor: "Kanye West",
+    excerpt: "Motivation comes in waves. Do I really want to be at the top? Im realizing as I get older its all about the journey.",
+    file: "journal-41.html"
+  },
+  {
+    date: "June 17, 2026",
+    title: "Like a Book",
+    song: "Be Somebody",
+    artist: "Clams Casino",
+    quote: "There's a huge value in learning to keep moving forward, and that the next page will be better than the last.",
+    quoteAuthor: "Charles Forsman",
+    excerpt: "Think of your life like a book. The ending is what you make it. Today I filed a trademark for my bottomless hourglass.",
+    file: "journal-42.html"
+  },
+  {
     date: "June 14, 2026",
     title: "Kanye Induction",
     song: "Gemini Season",
