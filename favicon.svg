@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 107 107">
+  <style>
+    .bg { fill: #131211; }
+    .glyph { stroke: #f0ede8; }
+    @media (prefers-color-scheme: light) {
+      .bg { fill: #f0ede8; }
+      .glyph { stroke: #131211; }
+    }
+  </style>
+  <rect class="bg" x="0" y="0" width="107" height="107" rx="14"/>
+  <g transform="translate(15,5)">
+    <defs>
+      <clipPath id="clip">
+        <rect x="0" y="0" width="77" height="96"/>
+      </clipPath>
+    </defs>
+    <line class="glyph" x1="3.5" y1="3.5" x2="73.5" y2="3.5" stroke-width="11" stroke-linecap="round"/>
+    <line class="glyph" x1="3.5" y1="3.5" x2="38.5" y2="52" stroke-width="11" stroke-linecap="round"/>
+    <line class="glyph" x1="73.5" y1="3.5" x2="38.5" y2="52" stroke-width="11" stroke-linecap="round"/>
+    <g clip-path="url(#clip)">
+      <line class="glyph" x1="38.5" y1="52" x2="73.5" y2="100.5" stroke-width="11" stroke-linecap="round"/>
+      <line class="glyph" x1="38.5" y1="52" x2="3.5" y2="100.5" stroke-width="11" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>
