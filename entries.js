@@ -1,5 +1,75 @@
 const JOURNAL_ENTRIES = [
   {
+    date: "July 3, 2026",
+    title: "Blame",
+    song: "Dissociating in NY II",
+    artist: "Nano",
+    quote: "You don't learn to walk by following the rules. You learn by doing, and by falling over.",
+    quoteAuthor: "Richard Branson",
+    excerpt: "Blame is the core of all negative emotions. Take responsibility for your own life. GRATITUDE IS THE SECRET.",
+    file: "journal-49.html"
+  },
+  {
+    date: "June 30, 2026",
+    title: "No More Selling the Basket",
+    song: "Go Mode",
+    artist: "Inzo",
+    quote: "Rule No.1: Never lose money. Rule No.2: Never forget rule No.1.",
+    quoteAuthor: "Warren Buffett",
+    excerpt: "Compound interest is a beautiful monster. Let her work for you. I officially added MA to my release. Rolling w it fr.",
+    file: "journal-48.html"
+  },
+  {
+    date: "June 29, 2026",
+    title: "Finished the Score",
+    song: "All the Love",
+    artist: "Kanye West",
+    quote: "A job is a short-term solution to a long-term problem.",
+    quoteAuthor: "Robert Kiyosaki",
+    excerpt: "Money is freedom. I finished the Score v2.2. 126 days until release. Make my younger self proud.",
+    file: "journal-47.html"
+  },
+  {
+    date: "June 27, 2026",
+    title: "Avoiding Responsibilities",
+    song: "Good Day Will Arrive",
+    artist: "ear",
+    quote: "I have often wondered how it is that every man loves himself more than all the rest of men, but yet sets less value on his own opinion of himself than on the opinion of others.",
+    quoteAuthor: "Marcus Aurelius",
+    excerpt: "People aren't thinking about you as deep as you think. Stop shifting who you are for people who don't care. I will get this app done.",
+    file: "journal-46.html"
+  },
+  {
+    date: "June 25, 2026",
+    title: "Tried to Get My Brothers to Use AI",
+    song: "Father",
+    artist: "Kanye West",
+    quote: "Remember that time is money.",
+    quoteAuthor: "Benjamin Franklin",
+    excerpt: "Fuck sleep. I'm building a billion dollar app in my hotel room. I have Chat tell Claude what to do. Launch in November.",
+    file: "journal-45.html"
+  },
+  {
+    date: "June 23, 2026",
+    title: "Hourgl",
+    song: "Still Light",
+    artist: "Wraith9",
+    quote: "Do not ask things to happen as you wish, but wish them to happen as they do happen, and your life will go smoothly.",
+    quoteAuthor: "Epictetus",
+    excerpt: "I came up w a name for the bottomless hourglass. Hourgl. A triple entendre. Time is running out- grow while you can.",
+    file: "journal-44.html"
+  },
+  {
+    date: "June 23, 2026",
+    title: "Play Something That I'd Like",
+    song: "This One Here",
+    artist: "Kanye West",
+    quote: "Our greatest glory is not in never falling, but in rising every time we fail.",
+    quoteAuthor: "Confucius",
+    excerpt: "What would life be without lessons? Those are the ones we are meant to truly learn from. Highly recommend.",
+    file: "journal-43.html"
+  },
+  {
     date: "June 22, 2026",
     title: "I AM",
     song: "Blast",
