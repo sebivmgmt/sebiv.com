@@ -1,5 +1,45 @@
 const JOURNAL_ENTRIES = [
   {
+    date: "July 12, 2026",
+    title: "Quit Gambling",
+    song: "Europa",
+    artist: "Roses",
+    quote: "If you are born poor it's not your mistake, but if you die poor it's your mistake.",
+    quoteAuthor: "Bill Gates",
+    excerpt: "Get rich quick schemes never work. In a world full of gamblers- think different. Quit gambling.",
+    file: "journal-51.html"
+  },
+  {
+    date: "July 9, 2026",
+    title: "Clammyclams Induction",
+    song: "I'm the Devil",
+    artist: "Clams Casino",
+    quote: "The number one thing that tells me if a man's going to be successful is his stress tolerance. You are not going to have a big life without big problems.",
+    quoteAuthor: "Andrew Tate",
+    excerpt: "Clams Casino has been a ride or die since 2014. I gotta stop planning and start doing.",
+    file: "journal-52.html"
+  },
+  {
+    date: "July 9, 2026",
+    title: "Manifest Destiny",
+    song: "High Grade",
+    artist: "Fuzion",
+    quote: "The number one thing that tells me if a man's going to be successful is his stress tolerance. You are not going to have a big life without big problems.",
+    quoteAuthor: "Andrew Tate",
+    excerpt: "Tough times create tough men. Nothing stopped me. I gotta stop planning and start doing.",
+    file: "journal-53.html"
+  },
+  {
+    date: "July 7, 2026",
+    title: "The Holiday of Hourgl",
+    song: "Europa Feels Like Home",
+    artist: "",
+    quote: "A man unable to differentiate between facts and his feelings will be a slave to those feelings.",
+    quoteAuthor: "Alexandrino",
+    excerpt: "7/7 - The Holiday of Hourgl. 587 days no alcohol. 117 days until IOU release. Today I finished something crazy- Arrangements.",
+    file: "journal-50.html"
+  },
+  {
     date: "July 3, 2026",
     title: "Blame",
     song: "Dissociating in NY II",
