@@ -1,12 +1,72 @@
 const JOURNAL_ENTRIES = [
   {
+    date: "July 27, 2026",
+    title: "You Are Meant to Learn Lessons",
+    song: "Fantasy",
+    artist: "Dye",
+    quote: "Develop success from failures. Discouragement and failure are two of the surest steppingstones to success.",
+    quoteAuthor: "Dale Carnegie",
+    excerpt: "Your reaction is what decides your mood- not the event. 607 days no alcohol. 97 days until IOU release.",
+    file: "journal-58.html"
+  },
+  {
+    date: "July 28, 2026",
+    title: "One Good Girl",
+    song: "Hardcore Hex",
+    artist: "Double Virgo",
+    quote: "It is better to fail in originality than to succeed in imitation.",
+    quoteAuthor: "Herman Melville",
+    excerpt: "I want to be the one w the pics. Because one good girl is worth a thousand bitches.",
+    file: "journal-59.html"
+  },
+    {
+    date: "July 26, 2026",
+    title: "No Better Time to Create",
+    song: "Mid Backstabbed",
+    artist: "Camille Keller",
+    quote: "The way to get started is to quit talking and begin doing.",
+    quoteAuthor: "Walt Disney",
+    excerpt: "There's no better time to get started. Art, videos, music, social media, apps. GO CREATE- Hourgl.com.",
+    file: "journal-57.html"
+  },
+    {
+    date: "July 25, 2026",
+    title: "Apple Developer - 100 Days",
+    song: "Security",
+    artist: "Europa",
+    quote: "If you can count your money, you don't have a billion dollars.",
+    quoteAuthor: "J. Paul Getty",
+    excerpt: "100 days until release. legal.iou.llc is live. I am officially an Apple Developer.",
+    file: "journal-56.html"
+  },
+    {
+    date: "July 19, 2026",
+    title: "An Escape Plan",
+    song: "Thanks to You",
+    artist: "Clams Casino",
+    quote: "I knew that if I failed I wouldn't regret that, but I knew the one thing I might regret is not trying.",
+    quoteAuthor: "Jeff Bezos",
+    excerpt: "This is the second job I've relocated 1000+ miles for. It's time for an escape plan. Call me Mr. Masterful.",
+    file: "journal-55.html"
+  },
+    {
+    date: "July 18, 2026",
+    title: "Get Paid",
+    song: "H. LLS, Lucy Park",
+    artist: "Gorillaz",
+    quote: "I don't know what's better gettin' laid or gettin' paid.",
+    quoteAuthor: "Kanye West",
+    excerpt: "There has never been more opportunity. Use your device to get you paid. 15 weeks until IOU release.",
+    file: "journal-54.html"
+  },
+    {
     date: "July 12, 2026",
-    title: "Quit Gambling",
+    title: "Be Like the Tortoise",
     song: "Europa",
     artist: "Roses",
     quote: "If you are born poor it's not your mistake, but if you die poor it's your mistake.",
     quoteAuthor: "Bill Gates",
-    excerpt: "Get rich quick schemes never work. In a world full of gamblers- think different. Quit gambling.",
+    excerpt: "Am I the only one who remembers the tortoise won? Think different. I need a vc.",
     file: "journal-51.html"
   },
   {
