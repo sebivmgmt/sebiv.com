@@ -499,6 +499,119 @@
       color: var(--text-muted);
     }
 
+    /* SHUFFLE PLAY MODULE */
+    #shuffle-teaser { background: var(--bg) !important; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+
+    .shuffle-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+
+    .shuffle-box-left { flex: 1; min-width: 260px; }
+
+    .shuffle-eyebrow {
+      font-size: 10px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--purple);
+      margin-bottom: 16px;
+    }
+
+    .shuffle-heading {
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      margin-bottom: 16px;
+    }
+
+    .shuffle-sub {
+      font-size: 14px;
+      color: var(--text-muted);
+      max-width: 420px;
+      line-height: 1.7;
+    }
+
+    .shuffle-box-right { display: flex; align-items: center; gap: 20px; flex-shrink: 0; }
+
+    .shuffle-hg svg { height: 52px; width: auto; opacity: 0.85; }
+
+    .btn-shuffle-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--purple);
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      padding: 16px 32px;
+      font-size: 12px;
+      font-family: inherit;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+    .btn-shuffle-home:hover { background: #b08ad6; }
+
+    @media (max-width: 640px) {
+      .shuffle-box { flex-direction: column; align-items: flex-start; }
+      .shuffle-box-right { width: 100%; justify-content: space-between; }
+    }
+
+    /* DIE-CUT TEASER */
+    #diecut-teaser { background: var(--bg2) !important; }
+
+    .diecut-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .diecut-grid img {
+      width: 100%;
+      border-radius: 4px;
+      display: block;
+    }
+
+    .diecut-heading {
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .diecut-body { font-size: 15px; color: var(--text-muted); line-height: 1.8; margin-bottom: 28px; max-width: 480px; }
+    .diecut-body strong { color: var(--text); }
+
+    .btn-diecut {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text);
+      border: 1px solid var(--purple);
+      padding: 14px 26px;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-diecut:hover { background: var(--purple); color: #fff; }
+
+    @media (max-width: 768px) {
+      .diecut-grid { grid-template-columns: 1fr; gap: 32px; }
+    }
+
     /* FOOTER */
     footer {
       background: #0a0908 !important;
@@ -563,6 +676,8 @@
     <ul>
       <li><a href="#shop" onclick="toggleMenu()">Shop</a></li>
       <li><a href="journal.html">Journal</a></li>
+      <li><a href="music.html">Music</a></li>
+      <li><a href="diecut.html">Die-Cuts</a></li>
       <li><a href="pot.html"><svg width="14" height="18" viewBox="0 0 77 107" fill="none" style="flex-shrink:0;vertical-align:middle;"><defs><clipPath id="clip-drawer"><rect x="0" y="0" width="77" height="96"/></clipPath></defs><line x1="3.5" y1="3.5" x2="73.5" y2="3.5" stroke="#888580" stroke-width="7" stroke-linecap="round"/><line x1="3.5" y1="3.5" x2="38.5" y2="52" stroke="#888580" stroke-width="7" stroke-linecap="round"/><line x1="73.5" y1="3.5" x2="38.5" y2="52" stroke="#888580" stroke-width="7" stroke-linecap="round"/><g clip-path="url(#clip-drawer)"><line x1="38.5" y1="52" x2="73.5" y2="100.5" stroke="#888580" stroke-width="7" stroke-linecap="round"/><line x1="38.5" y1="52" x2="3.5" y2="100.5" stroke="#888580" stroke-width="7" stroke-linecap="round"/></g></svg> POT</a></li>
       <li><a href="#community" onclick="toggleMenu()">Community</a></li>
       <li><a href="#about" onclick="toggleMenu()">About</a></li>
@@ -580,39 +695,62 @@
     </div>
   </section>
 
-  <!-- ABOUT -->
+  <!-- ABOUT PART 1: ORIGIN -->
   <section id="about">
     <div class="section-wrap">
+      <p class="section-label">About</p>
       <div class="about-text">
         <p>I started posting to SEBIV purely for aesthetics, but I never had a clear purpose. There was never a clear direction where I was headed with it. I think I figured it out now.</p>
         <p>I thought playlists would be the path. But where do I post them? I always knew I had a special connection to music, and I wanted a way to show other people that music. Instagram never had good music- it was always the free shit no one liked. Now I'm able to share my music, have a daily vision board, a hint of motivation, and share journal posts about my daily life as a 29 year old sober blue collar worker building an app in his free time.</p>
         <p><strong>My name is Alexandrino—</strong></p>
-        <p>Every one of my signatures on this site carries the <a href="/bottomless-hourglass" style="color:var(--purple);text-decoration:none;border-bottom:1px solid rgba(155,111,198,0.4);">Bottomless Hourglass</a>. An hourglass with no bottom. It serves as a representation of me. Of my lifestyle. I always move like time is running out. It's a quality most people lack- you have to be born w it. It's not just about speed though- you do not have to be the fastest (I'm still working on this). It's about consistency. Week in and week out- you only have 52. It's about putting your present self first. You cannot build a future without living in the present. Most of all it is proof that gratitude should be your greatest virtue.</p>
-        <p>The Bottomless Hourglass has its own home now. I named it <a href="https://hourgl.com" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:none;border-bottom:1px solid rgba(155,111,198,0.4);">Hourgl</a>. Time is running out. Grow while you still can.</p>
-        <p>In order for me to get sebiv in the dictionary I need people to use it. Instead of "that's a vibe," thatsebiv.</p>
-        <p>I have always been obsessed with music. Not just listening to it, but really feeling it.</p>
-        <p>It all started with Deadmau5, Strobe. <em>Still the greatest song of all time.</em> The emotions that come with it are insane. I just felt like there wasn't a way to describe that feeling. There is certain music that immediately heightens your emotions. That's what I'm searching for.</p>
-        <p>I came up with SEBIV back in 2018, blue collar work during the week, and ATL raves every weekend. Music, visuals, energy… <strong>it all felt connected.</strong></p>
-        <p>SEBIV isn't just an expensive shirt. It's a lifestyle. It's about being all in. It's about putting your future self first. It's about extremely high standards.</p>
-        <p>Right now, everything feels surface level. The goal with SEBIV is to bring things back to something real. Real positivity. Real gratitude. Real good music. I wanted to share a daily vision board that lays out aspects of my life in a journal form. If I didn't use Instagram I would've never started. Now I'm killing two birds with one stone.</p>
-        <p><em>Go do something for future you.</em></p>
-        <p class="about-sig" style="display:flex;align-items:center;gap:6px;margin-top:32px;">
-          <svg width="18" height="22" viewBox="0 0 77 107" fill="none" style="flex-shrink:0;">
-            <defs><clipPath id="clipAbout"><rect x="0" y="0" width="77" height="96"/></clipPath></defs>
-            <line x1="3.5" y1="3.5" x2="73.5" y2="3.5" stroke="#888580" stroke-width="7" stroke-linecap="round"/>
-            <line x1="3.5" y1="3.5" x2="38.5" y2="52" stroke="#888580" stroke-width="7" stroke-linecap="round"/>
-            <line x1="73.5" y1="3.5" x2="38.5" y2="52" stroke="#888580" stroke-width="7" stroke-linecap="round"/>
-            <g clip-path="url(#clipAbout)">
-              <line x1="38.5" y1="52" x2="73.5" y2="100.5" stroke="#888580" stroke-width="7" stroke-linecap="round"/>
-              <line x1="38.5" y1="52" x2="3.5" y2="100.5" stroke="#888580" stroke-width="7" stroke-linecap="round"/>
-            </g>
-          </svg>
-          <span style="font-style:italic;color:#888580;">lexandrino &nbsp;·&nbsp; Est. 2018</span>
-        </p>
       </div>
     </div>
   </section>
 
+  <!-- SHUFFLE PLAY TEASER -->
+  <section id="shuffle-teaser">
+    <div class="section-wrap">
+      <div class="shuffle-box">
+        <div class="shuffle-box-left">
+          <p class="shuffle-eyebrow">The POT Player</p>
+          <h2 class="shuffle-heading">Every song I've ever posted.<br>One shuffle away.</h2>
+          <p class="shuffle-sub">Every journal entry carries a song. This plays all of them, one at a time, at random.</p>
+        </div>
+        <div class="shuffle-box-right">
+          <div class="shuffle-hg">
+            <svg viewBox="0 0 77 107" fill="none" aria-hidden="true">
+              <defs><clipPath id="shuffleclip"><rect x="0" y="0" width="77" height="96"/></clipPath></defs>
+              <line x1="3.5" y1="3.5" x2="73.5" y2="3.5" stroke="#9B6FC6" stroke-width="7" stroke-linecap="round"/>
+              <line x1="3.5" y1="3.5" x2="38.5" y2="52" stroke="#9B6FC6" stroke-width="7" stroke-linecap="round"/>
+              <line x1="73.5" y1="3.5" x2="38.5" y2="52" stroke="#9B6FC6" stroke-width="7" stroke-linecap="round"/>
+              <g clip-path="url(#shuffleclip)">
+                <line x1="38.5" y1="52" x2="73.5" y2="100.5" stroke="#9B6FC6" stroke-width="7" stroke-linecap="round"/>
+                <line x1="38.5" y1="52" x2="3.5" y2="100.5" stroke="#9B6FC6" stroke-width="7" stroke-linecap="round"/>
+              </g>
+            </svg>
+          </div>
+          <a href="music.html" class="btn-shuffle-home">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/>
+              <polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/>
+            </svg>
+            Shuffle Play
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT PART 2: THE HOURGLASS -->
+  <section id="about-2" style="background: var(--bg2) !important;">
+    <div class="section-wrap">
+      <div class="about-text">
+        <p>Every one of my signatures on this site carries the <a href="/bottomless-hourglass" style="color:var(--purple);text-decoration:none;border-bottom:1px solid rgba(155,111,198,0.4);">Bottomless Hourglass</a>. An hourglass with no bottom. It serves as a representation of me. Of my lifestyle. I always move like time is running out. It's a quality most people lack- you have to be born w it. It's not just about speed though- you do not have to be the fastest (I'm still working on this). It's about consistency. Week in and week out- you only have 52. It's about putting your present self first. You cannot build a future without living in the present. Most of all it is proof that gratitude should be your greatest virtue.</p>
+        <p>The Bottomless Hourglass has its own home now. I named it <a href="https://hourgl.com" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:none;border-bottom:1px solid rgba(155,111,198,0.4);">Hourgl</a>. Time is running out. Grow while you still can.</p>
+        <p>In order for me to get sebiv in the dictionary I need people to use it. Instead of "that's a vibe," thatsebiv.</p>
+      </div>
+    </div>
+  </section>
 
   <!-- PHOTO STRIP -->
   <div class="photo-strip">
@@ -621,6 +759,17 @@
     <div class="photo-strip-item"><img src="photo1.jpeg" alt=""/></div>
     <div class="photo-strip-item"><img src="photo5.jpeg" alt=""/></div>
   </div>
+
+  <!-- ABOUT PART 3: MUSIC ORIGIN -->
+  <section id="about-3">
+    <div class="section-wrap">
+      <div class="about-text">
+        <p>I have always been obsessed with music. Not just listening to it, but really feeling it.</p>
+        <p>It all started with Deadmau5, Strobe. <em>Still the greatest song of all time.</em> The emotions that come with it are insane. I just felt like there wasn't a way to describe that feeling. There is certain music that immediately heightens your emotions. That's what I'm searching for.</p>
+        <p>I came up with SEBIV back in 2018, blue collar work during the week, and ATL raves every weekend. Music, visuals, energy… <strong>it all felt connected.</strong></p>
+      </div>
+    </div>
+  </section>
 
   <!-- SHOP -->
   <section id="shop">
@@ -652,6 +801,45 @@
           </script>
           <p class="product-note">Limited. No restocks. Ships worldwide.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIE-CUT TEASER -->
+  <section id="diecut-teaser">
+    <div class="section-wrap">
+      <p class="section-label">Rarity File</p>
+      <div class="diecut-grid">
+        <img src="diecut-line.jpeg" alt="Gastly, Haunter, and Gengar Topps Series 3 die-cut evolution line"/>
+        <div>
+          <h2 class="diecut-heading">The Most Overlooked<br>Rarity Story in Pokémon.</h2>
+          <p class="diecut-body">A public rarity thesis on the Topps Series 3 Gastly, Haunter, and Gengar die-cut evolution line. <strong>0 PSA 10s</strong> across the entire tracked line. Fragile design, brutal pull rates, and a collection I've been building since I found out about the power of I AM.</p>
+          <a href="diecut.html" class="btn-diecut">Read the File →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT PART 4: CLOSING -->
+  <section id="about-4" style="background: var(--bg2) !important;">
+    <div class="section-wrap">
+      <div class="about-text">
+        <p>SEBIV isn't just an expensive shirt. It's a lifestyle. It's about being all in. It's about putting your future self first. It's about extremely high standards.</p>
+        <p>Right now, everything feels surface level. The goal with SEBIV is to bring things back to something real. Real positivity. Real gratitude. Real good music. I wanted to share a daily vision board that lays out aspects of my life in a journal form. If I didn't use Instagram I would've never started. Now I'm killing two birds with one stone.</p>
+        <p><em>Go do something for future you.</em></p>
+        <p class="about-sig" style="display:flex;align-items:center;gap:6px;margin-top:32px;">
+          <svg width="18" height="22" viewBox="0 0 77 107" fill="none" style="flex-shrink:0;">
+            <defs><clipPath id="clipAbout"><rect x="0" y="0" width="77" height="96"/></clipPath></defs>
+            <line x1="3.5" y1="3.5" x2="73.5" y2="3.5" stroke="#888580" stroke-width="7" stroke-linecap="round"/>
+            <line x1="3.5" y1="3.5" x2="38.5" y2="52" stroke="#888580" stroke-width="7" stroke-linecap="round"/>
+            <line x1="73.5" y1="3.5" x2="38.5" y2="52" stroke="#888580" stroke-width="7" stroke-linecap="round"/>
+            <g clip-path="url(#clipAbout)">
+              <line x1="38.5" y1="52" x2="73.5" y2="100.5" stroke="#888580" stroke-width="7" stroke-linecap="round"/>
+              <line x1="38.5" y1="52" x2="3.5" y2="100.5" stroke="#888580" stroke-width="7" stroke-linecap="round"/>
+            </g>
+          </svg>
+          <span style="font-style:italic;color:#888580;">lexandrino &nbsp;·&nbsp; Est. 2018</span>
+        </p>
       </div>
     </div>
   </section>
