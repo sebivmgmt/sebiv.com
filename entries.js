@@ -1,5 +1,55 @@
 const JOURNAL_ENTRIES = [
   {
+    date: "August 21, 2026",
+    title: "I Am the Bull",
+    song: "This L",
+    artist: "Samiyam",
+    quote: "High expectations are the key to everything.",
+    quoteAuthor: "Sam Walton",
+    excerpt: "SEBIV is the definition of high expectations. Don't mind my journal entries- all be in my book one day. I am the bull.",
+    file: "journal-64.html"
+  },
+  {
+    date: "August 19, 2026",
+    title: "Stop Writing and Start Acting",
+    song: "Straight Over My Head",
+    artist: "Lapalux",
+    quote: "The most dangerous poison is the feeling of achievement. The antidote is to every evening think what can be done better tomorrow.",
+    quoteAuthor: "Elon Musk",
+    excerpt: "Stop talking and start acting. Act on your goals daily, and reassess weekly. I need to stop writing and start acting.",
+    file: "journal-63.html"
+  },
+  {
+    date: "August 18, 2026",
+    title: "Make Today That Day",
+    song: "BODYKEEPSDAS...",
+    artist: "RenzNiro, Lauren Duffus",
+    quote: "God grant me the serenity to accept the things I cannot change; courage to change the things I can; and wisdom to know the difference.",
+    quoteAuthor: "Kurt Vonnegut",
+    excerpt: "It begins w admitting you have a problem. Then - only you - can decide to do anything about it. IOU will help. 75 days left.",
+    file: "journal-62.html"
+  },
+  {
+    date: "August 11, 2026",
+    title: "The First 77",
+    song: "BWWS+",
+    artist: "Camille Keller",
+    quote: "When you live for others' opinions, you are dead.",
+    quoteAuthor: "Carlos Slim Helu",
+    excerpt: "Hourgl.com is fully live. To my 73 current followers- Thank you. Join the first 77. 82 days.",
+    file: "journal-61.html"
+  },
+  {
+    date: "August 8, 2026",
+    title: "No Explanation",
+    song: "Stapleface",
+    artist: "bbpue",
+    quote: "Never complain, Never explain.",
+    quoteAuthor: "Henry Ford II",
+    excerpt: "You don't owe anyone anything. No favors. No entertainment. And especially no explanation.",
+    file: "journal-60.html"
+  },
+  {
     date: "July 27, 2026",
     title: "You Are Meant to Learn Lessons",
     song: "Fantasy",
